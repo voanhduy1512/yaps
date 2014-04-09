@@ -1,5 +1,10 @@
 # Yaps
 
+[![Build Status](https://travis-ci.org/voanhduy1512/yaps.svg)](https://travis-ci.org/voanhduy1512/yaps)
+[![Coverage Status](https://coveralls.io/repos/voanhduy1512/yaps/badge.png)](https://coveralls.io/r/voanhduy1512/yaps)
+[![Code Climate](https://codeclimate.com/github/voanhduy1512/yaps.png)](https://codeclimate.com/github/voanhduy1512/yaps)
+
+
 TODO: Write a gem description
 
 ## Installation
