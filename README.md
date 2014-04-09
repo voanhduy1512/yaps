@@ -1,8 +1,10 @@
 # Yaps
 
+[![Gem Version](https://badge.fury.io/rb/yaps.svg)](http://badge.fury.io/rb/yaps)
 [![Build Status](https://travis-ci.org/voanhduy1512/yaps.svg)](https://travis-ci.org/voanhduy1512/yaps)
 [![Coverage Status](https://coveralls.io/repos/voanhduy1512/yaps/badge.png)](https://coveralls.io/r/voanhduy1512/yaps)
 [![Code Climate](https://codeclimate.com/github/voanhduy1512/yaps.png)](https://codeclimate.com/github/voanhduy1512/yaps)
+[![Dependency Status](https://gemnasium.com/voanhduy1512/yaps.svg)](https://gemnasium.com/voanhduy1512/yaps)
 
 
 TODO: Write a gem description
