@@ -22,12 +22,6 @@ Gem::Specification.new do |spec|
   spec.add_development_dependency 'rake'
   spec.add_development_dependency 'rspec'
   spec.add_development_dependency 'pry'
-  spec.add_development_dependency 'growl' if `uname` =~ /Darwin/
-  spec.add_development_dependency 'guard'
-  spec.add_development_dependency 'guard-bundler'
-  spec.add_development_dependency 'guard-rspec'
-  spec.add_development_dependency 'simplecov', '~> 0.7.1'
-  spec.add_development_dependency 'sqlite3'
 
   spec.add_dependency 'wisper'
   spec.add_dependency 'activerecord', '>= 3.0'

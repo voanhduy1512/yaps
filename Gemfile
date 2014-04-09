@@ -4,3 +4,11 @@ source 'https://rubygems.org'
 gemspec
 
 gem 'coveralls', :require => false
+gem 'growl' if `uname` =~ /Darwin/
+gem 'guard'
+gem 'guard-bundler'
+gem 'guard-rspec'
+gem 'simplecov', '~> 0.7.1'
+
+gem "sqlite3", :platform => [:ruby, :mswin, :mingw]
+gem "jdbc-sqlite3", :platform => :jruby
