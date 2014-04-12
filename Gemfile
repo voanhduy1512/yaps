@@ -9,5 +9,6 @@ gem 'guard'
 gem 'guard-bundler'
 gem 'guard-rspec'
 gem 'simplecov', '~> 0.7.1'
+gem 'database_cleaner'
 
 gem "sqlite3"

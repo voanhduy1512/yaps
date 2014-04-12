@@ -1,9 +1,7 @@
 module Yaps
   module ExtendPublisher
     def publish(*args)
-      if Yaps.configuration.enable?
-        super
-      end
+      Yaps.configuration.enable? && super
     end
   end
 

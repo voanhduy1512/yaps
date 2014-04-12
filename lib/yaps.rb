@@ -28,4 +28,11 @@ module Yaps
   def self.configure
     yield(configuration)
   end
+
+  def self.with_pushlisher_enable &block
+    previous = configuration.enable
+    configuration.enable = true
+    block.call
+    configuration.enable = previous
+  end
 end

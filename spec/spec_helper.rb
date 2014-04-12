@@ -15,17 +15,19 @@ elsif ENV["TRAVIS"] # in Travis-CI
 end
 
 require 'active_record'
-require 'yaps'
+require 'database_cleaner'
 
 ActiveRecord::Base.establish_connection(:adapter => "sqlite3", :database => ":memory:")
 ActiveRecord::Schema.define do
   self.verbose = false
-
   create_table :users, :force => true do |t|
     t.string :name
   end
 end
+
+require 'yaps'
 require 'supports/user'
+
 
 RSpec.configure do |config|
   config.treat_symbols_as_metadata_keys_with_true_values = true
@@ -37,4 +39,18 @@ RSpec.configure do |config|
   # the seed, which is printed after each run.
   #     --seed 1234
   config.order = 'random'
+
+  config.before(:suite) do
+    DatabaseCleaner.strategy = :transaction
+    DatabaseCleaner.clean_with(:truncation)
+  end
+
+  config.before(:each) do
+    DatabaseCleaner.start
+  end
+
+  config.after(:each) do
+    DatabaseCleaner.clean
+    Yaps.reset
+  end
 end
