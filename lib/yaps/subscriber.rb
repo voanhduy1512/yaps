@@ -4,7 +4,6 @@ module Yaps
     module ClassMethods
       def subscribe(event, opts)
         options = opts.clone
-        puts subscribe_instance.object_id
         Wisper.add_listener(subscribe_instance, on: event, with: options[:with])
         nil
       end

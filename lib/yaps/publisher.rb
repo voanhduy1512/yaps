@@ -1,6 +1,17 @@
 module Yaps
+  module ExtendPublisher
+    def publish(*args)
+      if Yaps.configuration.enable?
+        super
+      end
+    end
+  end
+
   module Publisher
     extend ActiveSupport::Concern
+    include Wisper::Publisher
+    prepend ExtendPublisher
+
     module ClassMethods
       def published(opts = {})
         options = opts.clone
