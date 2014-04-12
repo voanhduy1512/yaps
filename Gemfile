@@ -10,5 +10,4 @@ gem 'guard-bundler'
 gem 'guard-rspec'
 gem 'simplecov', '~> 0.7.1'
 
-gem "sqlite3", :platform => [:ruby, :mswin, :mingw]
-gem "activerecord-jdbcsqlite3-adapter", :platform => :jruby
+gem "sqlite3"
